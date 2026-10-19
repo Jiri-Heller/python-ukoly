@@ -1,14 +1,14 @@
 sleva = "Beze slevy"
-cena_osoba = 500
+cena = 500
 lidi = int(input("Zadejte počet lidí: "))
 if lidi >= 4:
     sleva = "Skupinová sleva"
-    cena_osoba = 375
+    cena = 375
 else:
     vek = float(input("Zadejte věk: "))
     if vek >= 65:
         sleva = "Seniorská sleva"
-        cena_osoba = 400
+        cena = 400
     else:
         while True:
             student = input("Jste student(ano/ne): ")
@@ -16,11 +16,11 @@ else:
                 break
         if student == "ano":
             sleva = "Studentská sleva"
-            cena_osoba = 350
-cena_celek = cena_osoba * lidi
+            cena = 350
+cena_celek = cena * lidi
 print
 print("-"*50)
-print(f"Cena za jednu osobu je {cena_osoba}")
+print(f"Cena za jednu osobu je {cena}")
 print(f"Cena za celek je {cena_celek}")
 print(sleva)
 print("-"*50)
